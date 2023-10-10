@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class=" p-2 absolute w-full bg-[#1F2937] p-">
+        <div class="container flex justify-between items-center mx-auto text-white">
+            <img class="cursor-pointer" src="image/logo.svg" alt="">
+            <ul class="flex gap-7">
+                <li class="cursor-pointer">BERANDA</li>
+                <li class="cursor-pointer">BANTUAN</li>
+                <li class="cursor-pointer">PELAYANAN</li>
+                <li class="cursor-pointer">KONTAK</li>
+            </ul>
+            <ul class="flex gap-5 items-center">
+                <li class="cursor-pointer">LOGIN</li>
+                <li class="border py-2 px-3 hover:bg-white hover:text-gray-800 cursor-pointer">DAFTAR</li>
+            </ul>
+        </div>
+    </nav>
+    <section style="background-image: url(image/image\ 2.svg); background-repeat: no-repeat; background-size: cover;" class="h-screen">
+        <div class="w-full flex justify-end container xl:px-20 mx-auto items-center h-full">
+            <div style="background: rgba(255, 255, 255, 0.75);" class="border rounded-3xl p-7">
+                <div class="flex gap-3 justify-between">
+                    <h2>Welcome to <span class="text-[#779341]">ANGSAH</span></h2>
+                    <div>
+                        <p class="text-xs">Have an Account?</p>
+                        <a class="text-xs text-[#779341]" href="#">Sign In</a>
+                    </div>
+                </div>
+                <h1 class="text-5xl font-medium mb-10">Sign Up</h1>
+               
+                <form action="">
+                    <div class="grid mb-5">
+                        <label class="mb-2 text-sm" for="">Enter your username or email adress</label>
+                        <input class="rounded-md p-3 text-sm" placeholder="Username or email adress" type="text">
+                    </div>
+                    <div class="flex mb-5">
+                        <div class="flex-1 w-64">
+                            <label class="mb-2 text-sm" for="">Username</label>
+                            <input class="rounded-md p-3 text-sm" placeholder="Username" type="text">
+                        </div>
+                        <div class="flex-1 w-32">
+                            <label class="mb-2 text-sm" for="">Contact Number</label>
+                            <input class="rounded-md p-3 text-sm" placeholder="Contact Number" type="text">
+                        </div>
+                      </div>
+                    <div class="grid mb-5">
+                        <label class="mb-2 text-sm" for="">Enter Your Password</label>
+                        <input class="rounded-md p-3 text-sm" placeholder="Enter Your Password" type="text">
+                    </div>
+                    <button class="p-3 bg-[#779341] rounded-md w-full text-white">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

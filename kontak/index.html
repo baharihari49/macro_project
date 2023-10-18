@@ -9,6 +9,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    
+
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" class="flex items-center">
@@ -22,8 +24,10 @@
             </svg>
             </button>
             <div class="hidden md:flex items-center gap-3">
-                <a class="text-white" href="/register">Daftar</a>
-               <a href="/login" class="text-white bg-[#2AA14A] px-5 py-3 rounded-md">Login</a>
+                <svg class="w-6 h-6 text-[#779341]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                </svg>
+                <p class="text-[#779341] font-medium">@NamaPengguna</p>
             </div>
             <!-- Dropdown menu -->
             <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
@@ -51,78 +55,130 @@
               <a href="/pelayanan" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PELAYANAN</a>
             </li>
             <li>
-              <a href="/kontak" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">KONTAK</a>
+              <a href="/kontak" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-[#2AA14A] md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">KONTAK</a>
             </li>
           </ul>
         </div>
         </div>
       </nav>
+      
+  
 
 
+    
+    <section class="container mx-auto md:px-5 md:py-20">
+        <div class="bg-gray-900 flex justify-center text-white md:rounded-2xl flex gap-3 p-20">
+            <div class="flex flex-col md:flex-row gap-10 md:gap-32"> 
+                <div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="../image/logo angsah.svg" alt="">
+                            <h5 class="text-lg font-semibold">Admin Angsah</h5>
+                        </div>
+                        <div class="ml-10">
+                            <div class="flex items-center gap-3 mb-1">
+                                <div class="p-2 bg-gray-600 w-fit rounded-full">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
+                                        <path d="M31.5 6.9375H4.5C4.20163 6.9375 3.91548 7.05932 3.7045 7.27616C3.49353 7.493 3.375 7.78709 3.375 8.09375V27.75C3.375 28.3633 3.61205 28.9515 4.03401 29.3852C4.45597 29.8189 5.02826 30.0625 5.625 30.0625H30.375C30.9717 30.0625 31.544 29.8189 31.966 29.3852C32.3879 28.9515 32.625 28.3633 32.625 27.75V8.09375C32.625 7.78709 32.5065 7.493 32.2955 7.27616C32.0845 7.05932 31.7984 6.9375 31.5 6.9375ZM18 19.2443L7.39266 9.25H28.6073L18 19.2443ZM13.8811 18.5L5.625 26.2772V10.7228L13.8811 18.5ZM15.5461 20.0682L17.2336 21.6652C17.4411 21.8611 17.7126 21.9697 17.9944 21.9697C18.2761 21.9697 18.5476 21.8611 18.7552 21.6652L20.4427 20.0682L28.5989 27.75H7.39266L15.5461 20.0682ZM22.1189 18.5L30.375 10.7213V26.2787L22.1189 18.5Z" fill="#E6E6E6"/>
+                                      </svg>
+                                </div>
+                                <div class="text-white">
+                                    <P>AngkutanSampah123@gmail.com</P>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-center">
+                                <div class="p-2 bg-gray-600 w-fit rounded-full">
+                                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"/>
+                                      </svg>
+                                </div>
+                                <P>+628123456789012</P>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="bg-[#2AA14A] p-2 rounded-full">
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                </svg>
+                            </div>
+                            <h5 class="text-lg font-semibold">Admin Angsah (Angkutan Sampah)</h5>
+                        </div>
+                        <div class="ml-10">
+                            <div class="flex items-center gap-3 mb-1">
+                                <div class="p-2 bg-gray-600 w-fit rounded-full">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
+                                        <path d="M31.5 6.9375H4.5C4.20163 6.9375 3.91548 7.05932 3.7045 7.27616C3.49353 7.493 3.375 7.78709 3.375 8.09375V27.75C3.375 28.3633 3.61205 28.9515 4.03401 29.3852C4.45597 29.8189 5.02826 30.0625 5.625 30.0625H30.375C30.9717 30.0625 31.544 29.8189 31.966 29.3852C32.3879 28.9515 32.625 28.3633 32.625 27.75V8.09375C32.625 7.78709 32.5065 7.493 32.2955 7.27616C32.0845 7.05932 31.7984 6.9375 31.5 6.9375ZM18 19.2443L7.39266 9.25H28.6073L18 19.2443ZM13.8811 18.5L5.625 26.2772V10.7228L13.8811 18.5ZM15.5461 20.0682L17.2336 21.6652C17.4411 21.8611 17.7126 21.9697 17.9944 21.9697C18.2761 21.9697 18.5476 21.8611 18.7552 21.6652L20.4427 20.0682L28.5989 27.75H7.39266L15.5461 20.0682ZM22.1189 18.5L30.375 10.7213V26.2787L22.1189 18.5Z" fill="#E6E6E6"/>
+                                      </svg>
+                                </div>
+                                <div class="text-white">
+                                    <P>AngkutanSampah123@gmail.com</P>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-center">
+                                <div class="p-2 bg-gray-600 w-fit rounded-full">
+                                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"/>
+                                      </svg>
+                                </div>
+                                <P>+628123456789012</P>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="bg-[#2AA14A] p-2 rounded-full">
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                </svg>
+                            </div>
+                            <h5 class="text-lg font-semibold">Admin Angsah (Pembayaran Iuran)</h5>
+                        </div>
+                        <div class="ml-10">
+                            <div class="flex items-center gap-3 mb-1">
+                                <div class="p-2 bg-gray-600 w-fit rounded-full">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
+                                        <path d="M31.5 6.9375H4.5C4.20163 6.9375 3.91548 7.05932 3.7045 7.27616C3.49353 7.493 3.375 7.78709 3.375 8.09375V27.75C3.375 28.3633 3.61205 28.9515 4.03401 29.3852C4.45597 29.8189 5.02826 30.0625 5.625 30.0625H30.375C30.9717 30.0625 31.544 29.8189 31.966 29.3852C32.3879 28.9515 32.625 28.3633 32.625 27.75V8.09375C32.625 7.78709 32.5065 7.493 32.2955 7.27616C32.0845 7.05932 31.7984 6.9375 31.5 6.9375ZM18 19.2443L7.39266 9.25H28.6073L18 19.2443ZM13.8811 18.5L5.625 26.2772V10.7228L13.8811 18.5ZM15.5461 20.0682L17.2336 21.6652C17.4411 21.8611 17.7126 21.9697 17.9944 21.9697C18.2761 21.9697 18.5476 21.8611 18.7552 21.6652L20.4427 20.0682L28.5989 27.75H7.39266L15.5461 20.0682ZM22.1189 18.5L30.375 10.7213V26.2787L22.1189 18.5Z" fill="#E6E6E6"/>
+                                      </svg>
+                                </div>
+                                <div class="text-white">
+                                    <P>AngkutanSampah123@gmail.com</P>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-center">
+                                <div class="p-2 bg-gray-600 w-fit rounded-full">
+                                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"/>
+                                      </svg>
+                                </div>
+                                <P>+628123456789012</P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center">
+                        <figure>
+                            <img src="../image/peta angsah.svg" alt="">
+                        </figure>
+                        <div class="flex justify-center mt-3">
+                            <div class="flex gap-3">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 21">
+                                    <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                      <path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                                      <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.17c.1.128.2.252.3.372L8 20l5.13-6.248c.193-.209.373-.429.54-.66l.13-.154Z"/>
+                                    </g>
+                                  </svg>
+                                <p class="font-semibold">Lokasi kantor angsah</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+   
 
-    <!-- hero -->
-    <section class="h-screen flex items-center"
-       style="background-image: url(../image/image\ 3.svg); background-position: center; background-size: cover;">
-       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 xl:py-32">
-           <h2
-               class="mb-1 md:mb-3 text-lg xl:text-3xl font-normal text-gray-400 lg:text-2xl sm:px-16 xl:px-48 dark:text-gray-400">
-               Halo, Selamat Datang</h2>
-           <h1
-               class="md:mb-5 mb-3 text-3xl font-semibold md:font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-5xl dark:text-white">
-               Solusi Terbaik Untuk Pengangkutan Sampah</h1>
-           <h3 class="mb-10 text-lg md:text-3xl text-gray-100">Kami Siap Melayani Anda</h3>
-           <div
-               class="flex md:flex-col xl:flex-row items-center justify-center gap-4 mb-8 lg:mb-16 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-               <a href="/login"
-                   class="inline-flex bg-[#2AA14A] hover:bg-[#288842] justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                   <p>Login</p>
-               </a>
-               <a href="/register"
-                       class="inline-flex text-white bg-[#2AA14A] hover:bg-[#288842] justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg">
-                       <p class="ml-1">Daftar</p>
-               </a>
-           </div>
-       </div>
-   </section>
-   <!-- hero end -->
-
-   <!-- About me -->
-   <section class="py-10">
-       <div class="container mx-auto">
-           <h3 class="text-center pb-5 md:pb-10 text-2xl md:text-4xl text-gray-800 font-semibold">About Me</h3>
-           <p class="text-center md:px-28 md:text-xl text-gray-700">“selamat datang di jasa layanan angkutan sampah
-               tempat di mana kami memahami pentingnya pengangkutan sampah yang efisien dan ramah lingkungan dengan
-               tujuan menjaga kebersihan dan kesehatan lingkungan."</p>
-       </div>
-   </section>
-   <!-- About me end -->
-
-
-   <!-- visi misi -->
-   <section class="py-10">
-       <div class="container mx-auto">
-           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-               <div class="p-8 bg-gray-800 text-white md:rounded-md">
-                   <h4 class="text-center text-xl font-medium pb-3">VISI</h4>
-                   <P>Mewujudkan sistem pengangkutan sampah yang ramah lingkungan dan berkelanjutan untuk menciptakan
-                       lingkungan yang bersih, sehat, dan nyaman bagi seluruh masyarakat.</P>
-               </div>
-               <div class="p-8 bg-gray-800 text-white md:rounded-md">
-                   <h4 class="text-center text-xl font-medium pb-3">Misi</h4>
-                   <ul class="list-disc text-">
-                       <li class="mb-2">
-                           Memastikan bahwa semua jenis sampah dapat diakomodasi dan diangkut dengan aman.
-                       </li>
-                       <li>
-                           Mengedukasi masyarakat tentang pentingnya pemilahan sampah dan praktik pengelolaan sampah
-                           yang berkelanjutan.
-                       </li>
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </section>
-   <!-- visi misi end -->
     <!-- footer -->
     
     <footer class="bg-gray-800">

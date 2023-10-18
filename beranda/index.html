@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +9,118 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <nav class=" p-2 w-full bg-[#1F2937] p-">
-        <div class="container flex justify-between items-center mx-auto text-white">
-            <img class="cursor-pointer" src="../image/logo.svg" alt="">
-            <ul class="flex gap-7">
-                <li class="cursor-pointer">BERANDA</li>
-                <li class="cursor-pointer">BANTUAN</li>
-                <li class="cursor-pointer">PELAYANAN</li>
-                <li class="cursor-pointer">KONTAK</li>
-                <li>
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 21">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 3.464V1.1m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175C15 15.4 15 16 14.462 16H1.538C1 16 1 15.4 1 14.807c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 8 3.464ZM4.54 16a3.48 3.48 0 0 0 6.92 0H4.54Z"/>
-                      </svg>
-                </li>
-            </ul>
-            <ul class="flex gap-5 items-center">
-                <li class="cursor-pointer flex gap-2">
-                    <svg class="w-6 h-6 text-[#779341]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" class="flex items-center">
+                <img src="../image/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+            </a>
+            <div class="flex items-center md:order-2">
+                <button type="button"
+                    class="flex mr-3 md:hidden text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                    data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <svg class="w-6 h-6 text-[#779341]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                </button>
+                <div class="hidden md:flex items-center gap-3">
+                    <svg class="w-6 h-6 text-[#779341]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     </svg>
                     <p class="text-[#779341] font-medium">@NamaPengguna</p>
-                </li>
-                <!-- <li class="border py-2 px-3 hover:bg-white hover:text-gray-800 cursor-pointer">DAFTAR</li> -->
-            </ul>
+                </div>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-gray-900 dark:text-white">@NamaPengguna</span>
+                        <span
+                            class="block text-sm  text-gray-500 truncate dark:text-gray-400">emailPengguna@gmail.com</span>
+                    </div>
+                </div>
+                <button data-collapse-toggle="navbar-user" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="/beranda"
+                            class="block py-2 pl-3 pr-4 text-[#2AA14A] bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-[#2AA14A] dark:hover:text-[#2AA14A]"
+                            aria-current="page">BERANDA</a>
+                    </li>
+                    <li>
+                        <a href="/bantuan"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BANTUAN</a>
+                    </li>
+                    <li>
+                        <a href="/pelayanan"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PELAYANAN</a>
+                    </li>
+                    <li>
+                        <a href="/kontak"
+                            class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">KONTAK</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
 
 
     <!-- hero -->
-    <section style="background-image: url(../image/image\ 3.svg);" class="">
+    <section class="h-screen flex items-center"
+        style="background-image: url(../image/image\ 3.svg); background-position: center; background-size: cover;">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 xl:py-32">
-            <h2 class="mb-5 text-lg xl:text-3xl font-normal text-gray-400 lg:text-2xl sm:px-16 xl:px-48 dark:text-gray-400">Halo, Selamat Datang</h2>
-            <h1 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-white">Solusi Terbaik Untuk Pengangkutan Sampah</h1>
-            <h3 class="mb-10 text-3xl text-gray-100">Kami Siap Melayani Anda</h3>
-            <div class="flex flex-col gap-4 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <a href="#" class="inline-flex bg-[#2AA14A] hover:bg-[#288842] justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
-                      </svg>
-                      <p class="ml-1">Pelayanan</p>
-                <a href="#" class="inline-flex text-white bg-[#2AA14A] hover:bg-[#288842] justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23" fill="none">
-                        <g clip-path="url(#clip0_345_474)">
-                          <path d="M26.9918 14.0277C26.6429 13.7577 26.2369 13.5722 25.8052 13.4857C25.3735 13.3992 24.9278 13.414 24.5027 13.529L19.5996 14.6631C19.7137 14.1783 19.7172 13.6739 19.6099 13.1875C19.5026 12.7012 19.2873 12.2456 18.9801 11.8549C18.6729 11.4642 18.2817 11.1485 17.836 10.9315C17.3902 10.7145 16.9015 10.6018 16.4062 10.6018H10.5398C10.0472 10.6006 9.55917 10.6976 9.10398 10.8872C8.6488 11.0768 8.23548 11.3552 7.88789 11.7065L5.23711 14.3743H1.875C1.37772 14.3743 0.900806 14.573 0.549175 14.9267C0.197544 15.2805 0 15.7602 0 16.2605L0 20.976C0 21.4763 0.197544 21.956 0.549175 22.3098C0.900806 22.6635 1.37772 22.8622 1.875 22.8622H14.0625C14.1392 22.8623 14.2155 22.8528 14.2898 22.8339L21.7898 20.9477C21.8376 20.9363 21.8843 20.9205 21.9293 20.9006L26.4844 18.9507L26.5359 18.9271C26.9737 18.7071 27.3486 18.3785 27.6253 17.9724C27.9019 17.5663 28.0713 17.0961 28.1174 16.6059C28.1634 16.1158 28.0847 15.6219 27.8886 15.1709C27.6925 14.7198 27.3855 14.3264 26.9965 14.0277H26.9918ZM1.875 16.2605H4.6875V20.976H1.875V16.2605ZM25.7145 17.2283L21.2613 19.1358L13.9453 20.976H6.5625V15.7076L9.21445 13.041C9.38793 12.865 9.59444 12.7256 9.82197 12.6307C10.0495 12.5357 10.2935 12.4873 10.5398 12.4881H16.4062C16.7792 12.4881 17.1369 12.6371 17.4006 12.9024C17.6643 13.1677 17.8125 13.5275 17.8125 13.9027C17.8125 14.2779 17.6643 14.6377 17.4006 14.903C17.1369 15.1683 16.7792 15.3174 16.4062 15.3174H13.125C12.8764 15.3174 12.6379 15.4167 12.4621 15.5936C12.2863 15.7705 12.1875 16.0104 12.1875 16.2605C12.1875 16.5106 12.2863 16.7505 12.4621 16.9274C12.6379 17.1042 12.8764 17.2036 13.125 17.2036H16.875C16.9456 17.2034 17.0159 17.1955 17.0848 17.18L24.9363 15.3634L24.9727 15.3539C25.2123 15.287 25.4682 15.3116 25.6909 15.423C25.9136 15.5344 26.0876 15.7247 26.1792 15.9574C26.2708 16.19 26.2737 16.4485 26.1872 16.6831C26.1008 16.9178 25.9311 17.112 25.7109 17.2283H25.7145ZM19.2188 8.71563C19.4504 8.71589 19.6816 8.69696 19.9102 8.65904C20.1672 9.42713 20.6375 10.1051 21.2655 10.6129C21.8934 11.1206 22.6527 11.4368 23.4537 11.5242C24.2546 11.6115 25.0637 11.4663 25.7852 11.1058C26.5067 10.7452 27.1106 10.1844 27.5253 9.48957C27.94 8.79474 28.1483 7.99498 28.1255 7.18484C28.1027 6.37471 27.8498 5.58809 27.3966 4.91797C26.9435 4.24784 26.3091 3.72225 25.5685 3.40333C24.8279 3.08441 24.0119 2.9855 23.2172 3.11829C22.9697 2.37824 22.524 1.72122 21.9292 1.21955C21.3345 0.717874 20.6137 0.390987 19.8461 0.274861C19.0786 0.158736 18.2941 0.257873 17.5789 0.561363C16.8638 0.864853 16.2457 1.36093 15.7928 1.995C15.3398 2.62908 15.0696 3.37656 15.0117 4.1552C14.9538 4.93384 15.1106 5.71345 15.4648 6.40824C15.8189 7.10302 16.3568 7.68604 17.0191 8.09314C17.6814 8.50024 18.4426 8.71564 19.2188 8.71563ZM26.25 7.30097C26.25 7.76729 26.1125 8.22314 25.855 8.61087C25.5975 8.9986 25.2314 9.30081 24.8032 9.47926C24.3749 9.65771 23.9036 9.7044 23.449 9.61343C22.9944 9.52245 22.5767 9.2979 22.249 8.96816C21.9212 8.63842 21.698 8.21831 21.6075 7.76094C21.5171 7.30358 21.5635 6.82951 21.7409 6.39869C21.9183 5.96786 22.2187 5.59963 22.6041 5.34055C22.9896 5.08148 23.4427 4.9432 23.9062 4.9432C24.5279 4.9432 25.124 5.19161 25.5635 5.63377C26.0031 6.07594 26.25 6.67565 26.25 7.30097ZM19.2188 2.11388C19.73 2.11413 20.2272 2.28258 20.6345 2.59354C21.0418 2.9045 21.3368 3.3409 21.4746 3.83623C20.9945 4.17609 20.5901 4.61304 20.2874 5.11911C19.9847 5.62518 19.7904 6.18923 19.7168 6.77518C19.5531 6.81074 19.3862 6.82892 19.2188 6.82941C18.5971 6.82941 18.001 6.58101 17.5615 6.13884C17.1219 5.69667 16.875 5.09696 16.875 4.47164C16.875 3.84633 17.1219 3.24662 17.5615 2.80445C18.001 2.36228 18.5971 2.11388 19.2188 2.11388Z" fill="white"/>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_345_474">
-                            <rect width="30" height="22.8947" fill="white"/>
-                          </clipPath>
-                        </defs>
-                      </svg>
-                      <p class="ml-1">Bantuan</p>
-                </a>  
+            <h2
+                class="mb-1 md:mb-3 text-lg xl:text-3xl font-normal text-gray-400 lg:text-2xl sm:px-16 xl:px-48 dark:text-gray-400">
+                Halo, Selamat Datang</h2>
+            <h1
+                class="md:mb-5 mb-3 text-3xl font-semibold md:font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-5xl dark:text-white">
+                Solusi Terbaik Untuk Pengangkutan Sampah</h1>
+            <h3 class="mb-10 text-lg md:text-3xl text-gray-100">Kami Siap Melayani Anda</h3>
+            <div
+                class="flex md:flex-col xl:flex-row items-center justify-center gap-4 mb-8 lg:mb-16 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="#"
+                    class="inline-flex bg-[#2AA14A] hover:bg-[#288842] justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z" />
+                    </svg>
+                    <p class="ml-1">Pelayanan</p>
+                </a>
+                <a href="#"
+                        class="inline-flex text-white bg-[#2AA14A] hover:bg-[#288842] justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23" fill="none">
+                            <g clip-path="url(#clip0_345_474)">
+                                <path
+                                    d="M26.9918 14.0277C26.6429 13.7577 26.2369 13.5722 25.8052 13.4857C25.3735 13.3992 24.9278 13.414 24.5027 13.529L19.5996 14.6631C19.7137 14.1783 19.7172 13.6739 19.6099 13.1875C19.5026 12.7012 19.2873 12.2456 18.9801 11.8549C18.6729 11.4642 18.2817 11.1485 17.836 10.9315C17.3902 10.7145 16.9015 10.6018 16.4062 10.6018H10.5398C10.0472 10.6006 9.55917 10.6976 9.10398 10.8872C8.6488 11.0768 8.23548 11.3552 7.88789 11.7065L5.23711 14.3743H1.875C1.37772 14.3743 0.900806 14.573 0.549175 14.9267C0.197544 15.2805 0 15.7602 0 16.2605L0 20.976C0 21.4763 0.197544 21.956 0.549175 22.3098C0.900806 22.6635 1.37772 22.8622 1.875 22.8622H14.0625C14.1392 22.8623 14.2155 22.8528 14.2898 22.8339L21.7898 20.9477C21.8376 20.9363 21.8843 20.9205 21.9293 20.9006L26.4844 18.9507L26.5359 18.9271C26.9737 18.7071 27.3486 18.3785 27.6253 17.9724C27.9019 17.5663 28.0713 17.0961 28.1174 16.6059C28.1634 16.1158 28.0847 15.6219 27.8886 15.1709C27.6925 14.7198 27.3855 14.3264 26.9965 14.0277H26.9918ZM1.875 16.2605H4.6875V20.976H1.875V16.2605ZM25.7145 17.2283L21.2613 19.1358L13.9453 20.976H6.5625V15.7076L9.21445 13.041C9.38793 12.865 9.59444 12.7256 9.82197 12.6307C10.0495 12.5357 10.2935 12.4873 10.5398 12.4881H16.4062C16.7792 12.4881 17.1369 12.6371 17.4006 12.9024C17.6643 13.1677 17.8125 13.5275 17.8125 13.9027C17.8125 14.2779 17.6643 14.6377 17.4006 14.903C17.1369 15.1683 16.7792 15.3174 16.4062 15.3174H13.125C12.8764 15.3174 12.6379 15.4167 12.4621 15.5936C12.2863 15.7705 12.1875 16.0104 12.1875 16.2605C12.1875 16.5106 12.2863 16.7505 12.4621 16.9274C12.6379 17.1042 12.8764 17.2036 13.125 17.2036H16.875C16.9456 17.2034 17.0159 17.1955 17.0848 17.18L24.9363 15.3634L24.9727 15.3539C25.2123 15.287 25.4682 15.3116 25.6909 15.423C25.9136 15.5344 26.0876 15.7247 26.1792 15.9574C26.2708 16.19 26.2737 16.4485 26.1872 16.6831C26.1008 16.9178 25.9311 17.112 25.7109 17.2283H25.7145ZM19.2188 8.71563C19.4504 8.71589 19.6816 8.69696 19.9102 8.65904C20.1672 9.42713 20.6375 10.1051 21.2655 10.6129C21.8934 11.1206 22.6527 11.4368 23.4537 11.5242C24.2546 11.6115 25.0637 11.4663 25.7852 11.1058C26.5067 10.7452 27.1106 10.1844 27.5253 9.48957C27.94 8.79474 28.1483 7.99498 28.1255 7.18484C28.1027 6.37471 27.8498 5.58809 27.3966 4.91797C26.9435 4.24784 26.3091 3.72225 25.5685 3.40333C24.8279 3.08441 24.0119 2.9855 23.2172 3.11829C22.9697 2.37824 22.524 1.72122 21.9292 1.21955C21.3345 0.717874 20.6137 0.390987 19.8461 0.274861C19.0786 0.158736 18.2941 0.257873 17.5789 0.561363C16.8638 0.864853 16.2457 1.36093 15.7928 1.995C15.3398 2.62908 15.0696 3.37656 15.0117 4.1552C14.9538 4.93384 15.1106 5.71345 15.4648 6.40824C15.8189 7.10302 16.3568 7.68604 17.0191 8.09314C17.6814 8.50024 18.4426 8.71564 19.2188 8.71563ZM26.25 7.30097C26.25 7.76729 26.1125 8.22314 25.855 8.61087C25.5975 8.9986 25.2314 9.30081 24.8032 9.47926C24.3749 9.65771 23.9036 9.7044 23.449 9.61343C22.9944 9.52245 22.5767 9.2979 22.249 8.96816C21.9212 8.63842 21.698 8.21831 21.6075 7.76094C21.5171 7.30358 21.5635 6.82951 21.7409 6.39869C21.9183 5.96786 22.2187 5.59963 22.6041 5.34055C22.9896 5.08148 23.4427 4.9432 23.9062 4.9432C24.5279 4.9432 25.124 5.19161 25.5635 5.63377C26.0031 6.07594 26.25 6.67565 26.25 7.30097ZM19.2188 2.11388C19.73 2.11413 20.2272 2.28258 20.6345 2.59354C21.0418 2.9045 21.3368 3.3409 21.4746 3.83623C20.9945 4.17609 20.5901 4.61304 20.2874 5.11911C19.9847 5.62518 19.7904 6.18923 19.7168 6.77518C19.5531 6.81074 19.3862 6.82892 19.2188 6.82941C18.5971 6.82941 18.001 6.58101 17.5615 6.13884C17.1219 5.69667 16.875 5.09696 16.875 4.47164C16.875 3.84633 17.1219 3.24662 17.5615 2.80445C18.001 2.36228 18.5971 2.11388 19.2188 2.11388Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_345_474">
+                                    <rect width="30" height="22.8947" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <p class="ml-1">Bantuan</p>
+                </a>
             </div>
         </div>
     </section>
@@ -70,8 +129,10 @@
     <!-- About me -->
     <section class="py-10">
         <div class="container mx-auto">
-            <h3 class="text-center pb-10 text-4xl text-gray-800 font-semibold">About Me</h3>
-            <p class="text-center px-28 text-xl text-gray-700">“selamat datang di jasa layanan angkutan sampah tempat di mana kami memahami pentingnya pengangkutan sampah yang efisien dan ramah lingkungan dengan tujuan menjaga kebersihan dan kesehatan lingkungan."</p>
+            <h3 class="text-center pb-5 md:pb-10 text-2xl md:text-4xl text-gray-800 font-semibold">About Me</h3>
+            <p class="text-center md:px-28 md:text-xl text-gray-700">“selamat datang di jasa layanan angkutan sampah
+                tempat di mana kami memahami pentingnya pengangkutan sampah yang efisien dan ramah lingkungan dengan
+                tujuan menjaga kebersihan dan kesehatan lingkungan."</p>
         </div>
     </section>
     <!-- About me end -->
@@ -80,19 +141,21 @@
     <!-- visi misi -->
     <section class="py-10">
         <div class="container mx-auto">
-            <div class="grid grid-cols-2 gap-4">
-                <div class="p-8 bg-gray-800 text-white rounded-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-8 bg-gray-800 text-white md:rounded-md">
                     <h4 class="text-center text-xl font-medium pb-3">VISI</h4>
-                    <P>Mewujudkan sistem pengangkutan sampah yang ramah lingkungan dan berkelanjutan untuk menciptakan lingkungan yang bersih, sehat, dan nyaman bagi seluruh masyarakat.</P>
+                    <P>Mewujudkan sistem pengangkutan sampah yang ramah lingkungan dan berkelanjutan untuk menciptakan
+                        lingkungan yang bersih, sehat, dan nyaman bagi seluruh masyarakat.</P>
                 </div>
-                <div class="p-8 bg-gray-800 text-white rounded-md">
+                <div class="p-8 bg-gray-800 text-white md:rounded-md">
                     <h4 class="text-center text-xl font-medium pb-3">Misi</h4>
                     <ul class="list-disc text-">
                         <li class="mb-2">
                             Memastikan bahwa semua jenis sampah dapat diakomodasi dan diangkut dengan aman.
                         </li>
                         <li>
-                            Mengedukasi masyarakat tentang pentingnya pemilahan sampah dan praktik pengelolaan sampah yang berkelanjutan.
+                            Mengedukasi masyarakat tentang pentingnya pemilahan sampah dan praktik pengelolaan sampah
+                            yang berkelanjutan.
                         </li>
                     </ul>
                 </div>
@@ -102,10 +165,10 @@
     <!-- visi misi end -->
 
     <!-- footer -->
-    
+
     <footer class="bg-gray-800">
         <div class="container mx-auto px-5 py-10">
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="text-white">
                     <h3>Payment methode</h3>
                     <div class="mt-3">
@@ -179,8 +242,8 @@
             </div>
         </div>
     </footer>
-
     <!-- footer end -->
 
 </body>
+
 </html>

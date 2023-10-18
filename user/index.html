@@ -7,8 +7,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
 <body>
+    
+
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" class="flex items-center">
@@ -21,9 +24,11 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
             </svg>
             </button>
-            <div class="hidden md:flex items-center gap-3">
-                <a class="text-white" href="/register">Daftar</a>
-               <a href="/login" class="text-white bg-[#2AA14A] px-5 py-3 rounded-md">Login</a>
+            <div class="hidden md:flex gap-3">
+                <svg class="w-6 h-6 text-[#779341]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                </svg>
+                <p class="text-[#779341] font-medium">@NamaPengguna</p>
             </div>
             <!-- Dropdown menu -->
             <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
@@ -42,87 +47,56 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
           <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a href="/beranda" class="block py-2 pl-3 pr-4 text-[#2AA14A] bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:hover:text-[#2AA14A]" aria-current="page">BERANDA</a>
+              <a href="#" class="block py-2 pl-3 pr-4 text-[#2AA14A] bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:hover:text-[#2AA14A]" aria-current="page">BERANDA</a>
             </li>
             <li>
-              <a href="/bantuan" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BANTUAN</a>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BANTUAN</a>
             </li>
             <li>
-              <a href="/pelayanan" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PELAYANAN</a>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PELAYANAN</a>
             </li>
             <li>
-              <a href="/kontak" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">KONTAK</a>
+              <a href="#" class="block py-2 pl-3 pr-4 text-[#2AA14A] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-[#2AA14A] md:dark:hover:text-[#2AA14A] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">KONTAK</a>
             </li>
           </ul>
         </div>
         </div>
       </nav>
+      
+  
 
 
-
-    <!-- hero -->
-    <section class="h-screen flex items-center"
-       style="background-image: url(../image/image\ 3.svg); background-position: center; background-size: cover;">
-       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 xl:py-32">
-           <h2
-               class="mb-1 md:mb-3 text-lg xl:text-3xl font-normal text-gray-400 lg:text-2xl sm:px-16 xl:px-48 dark:text-gray-400">
-               Halo, Selamat Datang</h2>
-           <h1
-               class="md:mb-5 mb-3 text-3xl font-semibold md:font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-5xl dark:text-white">
-               Solusi Terbaik Untuk Pengangkutan Sampah</h1>
-           <h3 class="mb-10 text-lg md:text-3xl text-gray-100">Kami Siap Melayani Anda</h3>
-           <div
-               class="flex md:flex-col xl:flex-row items-center justify-center gap-4 mb-8 lg:mb-16 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-               <a href="/login"
-                   class="inline-flex bg-[#2AA14A] hover:bg-[#288842] justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                   <p>Login</p>
-               </a>
-               <a href="/register"
-                       class="inline-flex text-white bg-[#2AA14A] hover:bg-[#288842] justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg">
-                       <p class="ml-1">Daftar</p>
-               </a>
-           </div>
-       </div>
-   </section>
-   <!-- hero end -->
-
-   <!-- About me -->
-   <section class="py-10">
-       <div class="container mx-auto">
-           <h3 class="text-center pb-5 md:pb-10 text-2xl md:text-4xl text-gray-800 font-semibold">About Me</h3>
-           <p class="text-center md:px-28 md:text-xl text-gray-700">“selamat datang di jasa layanan angkutan sampah
-               tempat di mana kami memahami pentingnya pengangkutan sampah yang efisien dan ramah lingkungan dengan
-               tujuan menjaga kebersihan dan kesehatan lingkungan."</p>
-       </div>
-   </section>
-   <!-- About me end -->
-
-
-   <!-- visi misi -->
-   <section class="py-10">
-       <div class="container mx-auto">
-           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-               <div class="p-8 bg-gray-800 text-white md:rounded-md">
-                   <h4 class="text-center text-xl font-medium pb-3">VISI</h4>
-                   <P>Mewujudkan sistem pengangkutan sampah yang ramah lingkungan dan berkelanjutan untuk menciptakan
-                       lingkungan yang bersih, sehat, dan nyaman bagi seluruh masyarakat.</P>
+    
+    <section class="container mx-auto px-5 py-20">
+       <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-32">
+            <div class="bg-gray-900 flex items-center p-10 rounded-md">
+                <div class="w-full">
+                    <svg class="w-20 h-20 mb-5 text-white mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                    </svg>
+                    <p class="font-semibold text-white text-center mx-auto">@NamaPengguna</p>
+                    <p class="text-gray-300 mx-auto text-center my-1">Customor</p>
+                    <p class="text-[#2AA14A] mx-auto text-center">Edit Profile</p>
+                </div>
+            </div>
+            <div class="bg-gray-900 p-10 rounded-md">
+               <div class="text-white">
+                    <p class="text-gray-300">Billing Adress</p>
+                    <p class="font-semibold">@NamaPengguna</p>
+                    <address class="my-5">Jalan Marelan, Medan, Sumatera Utara No. 10</address>
+                    <p class="font-semibold">NamaPengguna1@gmail.com</p>
+                    <p class="font-semibold">(+62) 812-3456-7890</p>
+                    <p class="text-[#2AA14A] mt-10">Edit Profile</p>
                </div>
-               <div class="p-8 bg-gray-800 text-white md:rounded-md">
-                   <h4 class="text-center text-xl font-medium pb-3">Misi</h4>
-                   <ul class="list-disc text-">
-                       <li class="mb-2">
-                           Memastikan bahwa semua jenis sampah dapat diakomodasi dan diangkut dengan aman.
-                       </li>
-                       <li>
-                           Mengedukasi masyarakat tentang pentingnya pemilahan sampah dan praktik pengelolaan sampah
-                           yang berkelanjutan.
-                       </li>
-                   </ul>
-               </div>
-           </div>
+            </div>
        </div>
-   </section>
-   <!-- visi misi end -->
+       <div class="border-2 rounded-xl border-gray-800 p-2 mt-10">
+        <div id="main" style="width: 100%;height:500px;"></div>
+       </div>
+    </section>
+  
+   
+
     <!-- footer -->
     
     <footer class="bg-gray-800">
@@ -203,6 +177,39 @@
     </footer>
 
     <!-- footer end -->
-
+    <script type="text/javascript">
+        // Initialize the echarts instance based on the prepared dom
+        var myChart = echarts.init(document.getElementById('main'));
+    
+        // Specify the configuration items and data for the chart
+        var option = {
+            legend: {
+                bottom: 0
+            },
+            color: [
+                '#1F2937',
+                '#2AA14A'
+            ],
+            tooltip: {},
+            dataset: {
+                dimensions: ['product', 'Angkutan Sampah', 'Pembayaran Iuran',],
+                source: [
+                { product: 'Senin', 'Angkutan Sampah': 43.3, 'Pembayaran Iuran': 85.8, 2017: 93.7 },
+                { product: 'Selasa', 'Angkutan Sampah': 83.1, 'Pembayaran Iuran': 73.4, 2017: 55.1 },
+                { product: 'Rabu', 'Angkutan Sampah': 86.4, 'Pembayaran Iuran': 65.2, 2017: 82.5 },
+                { product: 'Kamis', 'Angkutan Sampah': 72.4, 'Pembayaran Iuran': 53.9, 2017: 39.1 }
+                ]
+            },
+            xAxis: { type: 'category' },
+            yAxis: {},
+            // Declare several bar series, each will be mapped
+            // to a column of dataset.source by default.
+            series: [{ type: 'bar' }, { type: 'bar' },]
+            };
+    
+        // Display the chart using the configuration items and data just specified.
+        myChart.setOption(option);
+      </script>
 </body>
 </html>
+
